@@ -1,0 +1,3 @@
+scp -i C:\Users\stan_\Documents\AWS\ec2practice\ec2test1.pem C:\Users\stan_\Documents\eclipse-workspace\LegendaryStoreApp\target\legendary-store-app.war ec2-user@54.175.228.7:/home/ec2-user/apache-tomcat-10.0.0-M4/webapps
+netstat -a -n 
+taskkill /P 474745 /F
