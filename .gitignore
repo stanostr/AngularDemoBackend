@@ -31,4 +31,4 @@ build/
 .vscode/
 
 ###sensitive props###
-security.properties
+
