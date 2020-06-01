@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.legendarystore.model.Customer;
 import com.legendarystore.repository.CustomerRepository;
+import com.legendarystore.security.SecurityConstants;
 
 @RestController
 @RequestMapping("/signup")
@@ -26,7 +27,7 @@ public class SignupController {
 	public void signup(@RequestBody Customer newCustomer)
 	{
 		newCustomer.setPassword(passwordEncoder.encode(newCustomer.getPassword()));
-		newCustomer.setRole("ROLE_CUSTOMER");
+		newCustomer.setRole(SecurityConstants.CUSTOMER_ROLE);
 		customerRepository.save(newCustomer);
 	}
 }
